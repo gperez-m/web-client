@@ -13,11 +13,13 @@ class MyContextProvider extends Component{
         this.isLoggedIn();
         Axios.defaults.headers.common['Authorization'] = 'bearer '+ loginToken;
     }
+
     state = {
         showLogin:true,
         isAuth:false,
         theUser:null,
     }
+    
     toggleNav = () => {
         const showLogin = !this.state.showLogin;
         this.setState({
